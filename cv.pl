@@ -26,5 +26,16 @@ for (my $i = 0; $i< cv::wyksztalcenie_ile(); $i++)
 	cv::wyksztalcenie($i);
 }
 
+print "\nINNE:\n\n";
+
+cv::inne();
+
+print "\nZAINTERESOWANIA:\n\n";
+
+cv::zainteresowania();
+
+
+print "\nKLAUZULA\n\n";
+cv::klauzula();
 
 print "\n";

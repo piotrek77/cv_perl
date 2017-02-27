@@ -1,5 +1,4 @@
 #!/usr/bin/perl
-
 package cv;
 
 
@@ -21,9 +20,10 @@ sub doswiadczenie_zawodowe_ile()
 }
 sub doswiadczenie_zawodowe()
 {
-	$okres = "";
-	$nazwa = "";
-	$stanowisko = "";
+	my $okres = "";
+	my $nazwa = "";
+	my $stanowisko = "";
+	my @opis = {};
 	for(my $i = 0; $i<10; $i++)
 	{
 		$opis[$i]=""
@@ -83,7 +83,7 @@ sub doswiadczenie_zawodowe()
 	$j = @opis;
 	for (my $i=0; $i<$j; $i++)
 	{
-		if($opis[$i]!="")
+		if(length($opis[$i])>0)
 		{
 			print "\t\t".$opis[$i]."\n";
 		}
@@ -100,9 +100,10 @@ sub wyksztalcenie_ile()
 
 sub wyksztalcenie()
 {
-	$okres = "";
-	$nazwa = "";
-	$specjalnosc = "";
+	my $okres = "";
+	my $nazwa = "";
+	my $specjalnosc = "";
+	my @opis = {};
 	for (my $i = 0; $i<10;$i++)
 	{
 		$opis[$i] = "";
@@ -132,14 +133,68 @@ sub wyksztalcenie()
 	print "Nazwa:\t\t".$nazwa."\n";
 	print "Specjalnosc:\t".$specjalnosc."\n";
 	print "Opis:\n";
+
 	$j = @opis;
-	for(my $i=0;$i<$j;$i++)
+
+	for(my $i=0; $i<$j; $i++)
 	{
-		if ($opis[$i]!="")
+		if (length($opis[$i])>0)
 		{
 			print "\t\t".$opis[$i]."\n";
 		}
 	}	
+	print "\n\n";
+}
+
+sub inne()
+{
+	my @inne = {};
+	$inne[0] = "Znajomosc jezyka angielskiego w stopniu umozliwiajacym czytanie dokumentacji";
+	$inne[1] = "Prawo jazdy kategorii AB";
+	$inne[2] = "Znajomosc systemow operacyjnych MS Windows, Linux";
+	$inne[3] = "Dobra znajomosc pakietow biurowych MS Office, Libre Office";
+	$inne[4] = "Znajomosc jezykow progrwamowania C#(WF), Delphi, C++, Python";
+	$inne[5] = "Znajomosc baz danych MSSQL (T-SQL), MySQL, SQLite";
+	$inne[6] = "Dobra znajomosc przepisow kadrowo-placowych";
+	$inne[7] = "Znajomosc oprogramowania firmy Comarch (Optima, XL, Klasyka), Soneta (Enova)";
+	$inne[8] = "Znajomosc oprogramowania Platnik";
+	$inne[9] = "Czlonek stowarzyszenia Mensa Polska";
+	$inne[10] = "Sluzba Informacyjna - masowka";
+	$inne[11] = "Swiadectwo klasy C operatora urzadzen radiowych w sluzbie radiokomunikacyjnej amatorskiej";
+	$inne[12] = "Znajomosc GIT";
+	$inne[13] = "Kurs pierwszej pomocy AHA";
+	$inne[14] = "Instruktor Royal Rangers";
+	
+	my $j = @inne;
+	for(my $i = 0; $i< $j; $i++)
+	{
+		print "\t".$inne[$i]."\n";
+	}
+	print "\n\n";
+}
+
+sub zainteresowania()
+{
+	my @z= {};
+	$z[0] = "Komputery, internet";
+	$z[1] = "Nowe technologie teleinformatyczne";
+	$z[2] = "Turystyka";
+	$z[3] = "Jazda na rowerze";
+	$z[4] = "Fotografia";
+	$z[5] = "Jazda na motocyklu";
+
+	my $j = @z;
+	for(my $i = 0; $i<$j;$i++)
+	{
+		print "\t".$z[$i]."\n";
+	}
+	print "\n\n";
+}
+
+
+sub klauzula()
+{
+	print "Wyrazam zgode na przetwarzanie moich danych osobowych zawartych w mojej ofercie pracy dla potrzeb niezbednych do realizacji procesu rekrutacji zgodnie z ustawa z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (Dz. U. z 2002 r. Nr 101, poz. 926, ze zm.)";
 }
 
 1;
