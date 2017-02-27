@@ -3,7 +3,7 @@ DANE OSOBOWE:
 Imie:		Piotr
 Drugie imie: 	Robert
 Nazwisko:	Oslowski
-Email:		piotr.oslowski.com
+Email:		piotr.oslowski@gmail.com
 Adres:		08-112 Wisniew, ul. Szkolna 11
 Telefon:		792575074
 
