@@ -19,6 +19,12 @@ for (my $i = 0; $i< cv::doswiadczenie_zawodowe_ile(); $i++)
 }
 
 
+print "\nWYKSZTALCENIE:\n\n";
+
+for (my $i = 0; $i< cv::wyksztalcenie_ile(); $i++)
+{
+	cv::wyksztalcenie($i);
+}
 
 
 print "\n";

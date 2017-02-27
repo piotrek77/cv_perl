@@ -93,5 +93,53 @@ sub doswiadczenie_zawodowe()
 }
 
 
+sub wyksztalcenie_ile()
+{
+	return 3;
+}
+
+sub wyksztalcenie()
+{
+	$okres = "";
+	$nazwa = "";
+	$specjalnosc = "";
+	for (my $i = 0; $i<10;$i++)
+	{
+		$opis[$i] = "";
+	}
+	
+	if ($_[0]==0)
+	{
+		$okres = "1999-2003";
+		$nazwa = "Akademia Podlaska (obecnie Uniwersytet Przyrodniczo-Humanistyczny w Siedlcach)";
+		$spacjalnosc = "Nauczyciel informatyki";
+	}
+	
+	if ($_[0]==1)
+	{
+		$okres = "1998-1999";
+		$nazwa = "Politechnika Bialostocka - Wydzial Informatyki";
+	}
+	if ($_[0]==2)
+	{
+		$okres = "1992-1997";
+		$nazwa = "Technikum Elektroniczne w Siedlcach";
+		$specjalnosc = "Elektronika ogolna";
+		$opis[0] = "Szkola ukonczona z najwyzsza ocena z zawodu";
+		$opis[1] = "I miejsce w etapie okregowym Olimpiady Wiedzy Technicznej";
+	}
+	print "Okres:\t\t".$okres."\n";
+	print "Nazwa:\t\t".$nazwa."\n";
+	print "Specjalnosc:\t".$specjalnosc."\n";
+	print "Opis:\n";
+	$j = @opis;
+	for(my $i=0;$i<$j;$i++)
+	{
+		if ($opis[$i]!="")
+		{
+			print "\t\t".$opis[$i]."\n";
+		}
+	}	
+}
 
 1;
